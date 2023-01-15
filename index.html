@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto Final - CV</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="resources/icon.png">
+</head>
+<body>
+    <section>
+        <!--Parte de las cajas de información (Datos personales, formacion academica y contacto)-->
+        <div class="grids">
+            <div class ="box b1">
+                <img src="resources/profile-ph.jpg" alt="foto-de-perfil" id="julian"
+                height="150px" width="150px">
+            </div>
+            <div class ="box b2">
+                <ul class="listaPresentacion">
+                    <li><span class ="texto-euro textoPresentacion">Julián Alvarez</span></li>
+                    <li><span class ="texto-euro textoPresentacion">22 Años</span></li>
+                    <li><span class ="texto-euro textoPresentacion">Calchín, Córdoba - Argentina</span></li>
+                </ul>
+            </div>
+            <div class ="box b3">
+                <legend>DATOS PERSONALES</legend>
+                <ul>
+                    <li><span class ="destacado texto-Ajuste">DNI: </span><span class ="texto-euro texto-Ajuste">12.345.678</span></li>
+                    <li><span class ="destacado texto-Ajuste">FECHA DE NACIMIENTO: </span><span class ="texto-euro texto-Ajuste">31/01/2000</span></li>
+                    <li><span class ="destacado texto-Ajuste">DIRECCION: </span><span class ="texto-euro texto-Ajuste">Calle Gral. Paz 123, Calchín, Córdoba</span></li>
+                </ul>
+            </div>
+            <div class ="box b4">
+                <legend>ESTUDIOS</legend>
+                <ul>
+                    <li><span class="destacado texto-Ajuste">PRIMARIA: </span><span class="texto-euro texto-Ajuste">Escuela de Córdoba</span></li>
+                    <li><span class="destacado texto-Ajuste">SECUNDARIA: </span><span class="texto-euro texto-Ajuste">Escuela Secundaria de Córdoba</span></li>
+                    <li><span class="destacado texto-Ajuste">UNIVERSIDAD: </span><span class="texto-euro texto-Ajuste">Una carrera - Universidad Nacional de Córdoba</span></li>
+                </ul>
+            </div>
+            <div class ="box b5">
+                <legend>EMAIL</legend>
+                <img src="resources/logo-email.png" alt="logo-email" class="center"
+                width="50px" height="50px">
+                <button type="button" id="mail-button">Mostrar Mail</button>
+            </div>
+            <div class ="box b6">
+                <legend>CELULAR</legend>
+                <img src="resources/logo-celular.png" alt="logo-celular" class="center"
+                width="50px" height="50px">
+                <button type="button" id="wsp-button">Mostrar Celular</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <legend class="titulos">HABILIDADES</legend>
+    </section>
+
+    <section>
+        <!--Parte de las imagenes deslizantes-->
+    
+    <div class="Presentaciones">
+        <div class ="Presentacion animacion">
+            <div class="slidetext">DESARROLLO WEB</div>
+            <img src="resources/slide1.png" alt="imagen-presentacion1"
+            width="100%" class="presentacion_styles">
+            <div class="bottomtext">Aprendiendo de forma autodidacta</div>
+        </div>
+
+        <div class ="Presentacion animacion">
+            <div class="slidetext">MANEJO DE APPS DE EDICION</div>
+            <img src="resources/slide2.png" alt="imagen-presentacion2"
+            width="100%" class="presentacion_styles">
+            <div class="bottomtext">Como Photoshop y Vegas Pro</div>
+        </div>
+
+        <div class ="Presentacion animacion">
+            <div class="slidetext">DISEÑO CON OBJETOS 3D</div>
+            <img src="resources/slide3.png" alt="imagen-presentacion3"
+            width="100%" class="presentacion_styles">
+            <div class="bottomtext">Aprendiendo Blender via YouTube</div>
+        </div>
+        <a class="anterior" onclick="moverPresentacion(-1)">&#10094--</a>
+        <a class="siguiente" onclick="moverPresentacion(1)">--&#10095</a>
+    </div>
+        <!--Si bien a esta parte de presentaciones la leí de w3schools, decidi hacerla paso por paso leyendo la pág
+    Porque al hacerle copypaste no entendía ni un comino de lo que acababa de hacer
+    Además, quería darle mi estilo :p-->
+    </section>
+
+    <section>
+        <legend class="titulos">EXPERIENCIA LABORAL</legend>
+    </section>
+
+    <section>
+        <!--Parte de la experiencia laboral-->
+
+    <div class="background">
+        <div class ="bgbox caja1">
+            <img src="resources/juli.jpg" alt="Foto-Julian-Alvarez" id="julian2">
+        </div>
+        <div class ="bgbox caja2">
+            <h3 class="destacado2">JUGADOR PROFESIONAL DE FUTBOL</h3>
+            <p>El 9 de la selección Argentina de Futbol</p>
+            <h3 class="destacado2">Y CAMPEON DEL MUNDO!</h3>
+        </div>
+
+    </div>
+    </section>    
+    <footer>
+        <div class="pagfoot">
+            <h3 id="Firma">Santiago</h3>
+            <span id="textoPie">© 2023 - Todos los derechos reservados</span>
+        </div>
+    </footer>
+
+    <script src="Events.js"></script>
+
+    <div></div>
+</body>
+</html>

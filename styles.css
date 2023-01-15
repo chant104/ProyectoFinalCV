@@ -1,0 +1,389 @@
+/* Agregado de fuentes personalizadas (se encuentran en la carpeta resources/fonts) */
+@font-face {
+    font-family: Autography;
+    src: url(resources/fonts/autography-font/Autography-DOLnW.otf);
+}
+
+@font-face {
+    font-family: eurostile;
+    src: url(resources/fonts/Eurostile-Font/Eurostile.ttf);
+}
+
+@font-face {
+    font-family: blogger-bold;
+    src: url(resources/fonts/Blogger/Commercial/OTF/Blogger\ Sans-Bold.otf);
+}
+
+@font-face {
+    font-family: Qontra;
+    src: url(resources/fonts/Qontra/Qontra.otf);
+}
+
+/* Diseño de la primera parte de la página (cajas de datos personales, formacion acadmeica y contacto) */
+body {
+    background-image: url(resources/bg1.jpg);
+    margin: auto auto;
+}
+
+#julian {
+    border-radius: 50%;
+    margin: 15px auto 15px auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+legend {
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: blogger-bold;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.527);
+    color: white;
+}
+
+.box {
+    border-radius: 30px;
+    background-color: #0b4b59;
+    margin: 10px;
+}
+
+
+.b1 {
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.b2 {
+    grid-column: 2/5;
+    text-align: left;
+}
+
+.b3 {
+    grid-column: 1/4;
+    padding: 30px;
+}
+
+.b4 {
+    grid-column: 4/5;
+    padding: 30px;
+}
+
+.b5 {
+    grid-column: 1/4;
+    text-align: center;
+    padding: 20px;
+}
+
+.b6 {
+    grid-column: 4/5;
+    text-align: center;
+    padding: 20px;
+}
+
+.textoPresentacion {
+    font-size: 25px;
+}
+
+.listaPresentacion {
+    margin-top: 50px;
+}
+
+.grids {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    width: 82%;
+    margin: 10px auto;
+    border-radius: 30px;
+}
+
+
+.destacado {
+    font-family: Arial Narrow;
+    font-weight: bolder;
+    text-shadow: 2px 2px 6px black;
+    color: white;
+}
+
+#mail-button {
+    background-color: brown;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px black;
+}
+
+#wsp-button {
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.titulos {
+    margin: 10px auto;
+    font-family: qontra;
+    text-align: center;
+    font-size: 40px;
+    background-color: #677F77;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    width: 80%;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.527);
+}
+
+.texto-euro {
+    font-family: eurostile;
+    text-shadow: 2px 2px 6px black;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+li::before {content: "•"; color: white;
+    display: inline-block; width: 1em;
+    margin-left: -1em}
+
+/* Esto es para hacer responsive a la parte de la información */
+
+@media only screen and (max-width: 768px) {
+    .b1 {
+        grid-column: 1/3;
+    }
+
+    .b2 {
+        grid-column: 1/3;
+    }
+
+    .listaPresentacion {
+        margin-top: 10px;
+    }
+
+    .b3 {
+        grid-column: 1/3;
+    }
+    
+    .b4 {
+        grid-column: 1/3;
+    }
+    
+    .b5 {
+        grid-column: 1/3;
+        text-align: center;
+    }
+    
+    .b6 {
+        grid-column: 1/3;
+        text-align: center;
+    }
+
+    .titulos {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .texto-Ajuste {
+        font-size: 12px;
+    }
+
+    .textoPresentacion {
+        font-size: 15px;
+    }
+
+    legend {
+        font-size: 15px;
+    }
+}
+
+/* Diseño de la segunda parte de la página (imagenes deslizantes) */
+
+
+.Presentaciones {
+    max-width: 80%;
+    position: relative;
+    margin: 10px auto 10px auto;
+}
+
+.presentacion_styles {
+    border-radius: 30px;
+}
+
+.Presentacion {
+    display: none;
+}
+
+.anterior, .siguiente {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.siguiente {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.anterior:hover, .siguiente:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.bottomtext {
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: left;
+    font-family: eurostile;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.342);
+}
+
+.slidetext {
+    color: white;
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    font-family: Arial Narrow;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.459);
+    font-weight: bolder;
+}
+
+.animacion {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 768px) {
+    .bottomtext {
+        font-size: 15px;
+    }
+
+    .slidetext {
+        font-size: 15px;
+    }
+}
+
+
+/* Diseño de la tercera parte de la página (experiencia laboral) */
+
+.background {
+    display: grid;
+    background-image: url(resources/blurry-bg.jpg);
+    grid-template-columns: 30% auto;
+    width: 80%;
+    margin: 10px auto 80px auto;;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.bgbox {
+    border-radius: 20px;
+    background-color: #aca68e7c;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
+.destacado2 {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: blogger-bold;
+    text-shadow: 4px 4px 6px black;
+}
+
+#julian2 {
+    max-width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+p {
+    font-family: eurostile;
+    font-size: 20px;
+    text-shadow: 2px 2px 6px black;
+}
+
+@media only screen and (max-width: 768px) {
+    .caja1 {
+        grid-column: 1/3;
+    }
+
+    .caja2 {
+        grid-column: 1/3;
+    }
+
+    .destacado2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+    
+}
+
+/* Diseño del pie de pagina */
+
+.pagfoot {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    margin: 10px auto none auto;
+    background-color: black;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#Firma {
+    font-family: Autography;
+    color: white;
+    font-size: 60px;
+    margin: 2px auto 2px auto;
+}
+
+#textoPie {
+    color: white;
+    font-family: Arial Black;
+}
+
+@media only screen and (max-width: 768px) {
+    #Firma {
+        font-size: 45px;
+    }
+}
